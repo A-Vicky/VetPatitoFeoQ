@@ -1,5 +1,5 @@
 <template>
-  <q-layout >
+  <q-layout>
     <q-header class="bg-midnight" elevated>
       <q-toolbar>
         <q-btn
@@ -11,10 +11,9 @@
           @click="leftDrawerOpen = !leftDrawerOpen"
         />
 
-        <q-toolbar-title class="text-white" >
+        <q-toolbar-title class="text-white">
           Veterinaria Patito Feo
         </q-toolbar-title>
-
       </q-toolbar>
     </q-header>
 
@@ -30,13 +29,13 @@
           v-ripple
           :to="item.path"
           active-class="bg-cadet"
-          @click="left=false"
+          @click="left = false"
         >
           <q-item-section avatar>
             <q-icon class="electric" :name="item.icon" />
           </q-item-section>
-          <q-item-section class="text-electric" >
-            <q-item-label >{{ item.title }}</q-item-label>
+          <q-item-section class="text-electric">
+            <q-item-label>{{ item.title }}</q-item-label>
             <q-item-label class="text-cadet" caption>{{
               item.description
             }}</q-item-label>
@@ -52,10 +51,9 @@
 </template>
 
 <script>
-
 export default {
-  name: 'MainLayout',
-  data () {
+  name: "MainLayout",
+  data() {
     return {
       leftDrawerOpen: false,
       actions: [
@@ -69,28 +67,28 @@ export default {
           title: "Employees",
           description: "View list of all current employees",
           icon: "people",
-          path: ""
+          path: "/app/employee"
         },
         {
           title: "Owners",
           description: "View list of all current owners",
           icon: "face",
-          path: ""
+          path: "/app/owner"
         },
         {
           title: "Pets",
           description: "View list of all current pets",
           icon: "pets",
-          path: ""
+          path: "/app/pet"
         },
         {
           title: "Appointments",
           description: "View appointment history",
           icon: "healing",
-          path: ""
+          path: "/app/appointment"
         }
       ]
-    }
+    };
   }
-}
+};
 </script>
