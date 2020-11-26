@@ -1,16 +1,27 @@
 <template>
-  <q-page class="flex flex-center bg-violet text-midnight">
-    <q-table
-      grid
-      card-class="bg-midnight text-white"
-      title="Appointments"
-      :data="data"
-      :columns="columns"
-      row-key="name"
-      hide-header
-      style="width:80%"
-    >
-    </q-table>
+  <q-page class=" bg-violet text-midnight">
+    <q-btn
+      rounded
+      label="Add Appointment"
+      icon="assignment"
+      color="cadet"
+      style="margin-left:80%;margin-top:3%"
+      to="/app/newappointment"
+    ></q-btn>
+    <q-separator horizontal class="transparent" />
+    <center>
+      <q-table
+        grid
+        card-class="bg-midnight text-white"
+        title="Appointments"
+        :data="data"
+        :columns="columns"
+        row-key="name"
+        hide-header
+        style="width:80%"
+      >
+      </q-table>
+    </center>
   </q-page>
 </template>
 

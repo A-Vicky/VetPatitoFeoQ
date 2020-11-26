@@ -1,16 +1,27 @@
 <template>
-  <q-page class="flex flex-center bg-violet text-midnight">
-    <q-table
-      grid
-      card-class="bg-midnight text-white"
-      title="Pets"
-      :data="data"
-      :columns="columns"
-      row-key="name"
-      hide-header
-      style="width:80%"
-    >
-    </q-table>
+  <q-page class="bg-violet text-midnight">
+    <q-btn
+      rounded
+      label="Add Pet"
+      icon="pets"
+      color="cadet"
+      style="margin-left:80%;margin-top:3%"
+      to="/app/newpet"
+    ></q-btn>
+    <q-separator horizontal class="transparent" />
+    <center>
+      <q-table
+        grid
+        card-class="bg-midnight text-white"
+        title="Pets"
+        :data="data"
+        :columns="columns"
+        row-key="name"
+        hide-header
+        style="width:80%"
+      >
+      </q-table>
+    </center>
   </q-page>
 </template>
 
